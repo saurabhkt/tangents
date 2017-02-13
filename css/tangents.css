@@ -1,0 +1,95 @@
+@font-face {
+	font-family: BrandonLight;
+	src: url(/fonts/brandon_light.otf);
+}
+
+* {
+	font-family: BrandonLight;
+	font-size: 14px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000000;
+}
+
+button {
+	height: 50px;
+	width: 250px;
+	padding: 10px;
+	font-size: 1em;
+	letter-spacing: 3px;
+	color: #ffffff;
+	background-color: transparent;
+	border: 1px solid #ffffff;
+	border-radius: 0px;
+	transition: all 0.3s ease-in;
+		-o-transition: all 0.3s ease-in;
+		-ms-transition: all 0.3s ease-in;
+		-moz-transition: all 0.3s ease-in;
+		-webkit-transition: all 0.3s ease-in;
+}
+
+button:hover, button:active, button:focus {
+	border-color: #ffffff;
+	color: #000000;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+
+#landingContent {
+	height: 100%;
+}
+
+#landingImg {
+	width: 100%;
+	height: auto;
+}
+
+#landingLogo {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 30em;
+    height: auto;
+    margin: 30% auto;
+}
+
+#enterSiteBtn {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto auto;
+}
+
+.social-icon {
+	width: 20px;
+	height: auto;
+}
+
+
+
+@media (max-width: 767px) {
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
