@@ -3,9 +3,37 @@
 	src: url(/fonts/brandon_light.otf);
 }
 
+@font-face {
+	font-family: Nitti;
+	src: url(/fonts/nitti.otf);
+}
+
 * {
 	font-family: BrandonLight;
 	font-size: 14px;
+	color: #ffffff;
+}
+
+a {
+	text-decoration: none !important;
+	color: inherit;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	transition: color 0.3s linear;
+	    -o-transition: color 0.3s linear;
+	    -ms-transition: color 0.3s linear;
+	    -moz-transition: color 0.3s linear;
+	    -webkit-transition: color 0.3s linear;
+}
+
+a, a:hover {
+	cursor: pointer;
+	text-decoration: none;
 }
 
 body {
@@ -15,15 +43,20 @@ body {
 }
 
 button {
-	height: 50px;
-	width: 250px;
+	height: 4.5em;
+	width: 18em;
+	font-size: 14px;
 	padding: 10px;
-	font-size: 1em;
+	cursor: pointer;
 	letter-spacing: 3px;
 	color: #ffffff;
 	background-color: transparent;
 	border: 1px solid #ffffff;
 	border-radius: 0px;
+	outline: none;
+		box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		-webkit-box-shadow: none !important;
 	transition: all 0.3s ease-in;
 		-o-transition: all 0.3s ease-in;
 		-ms-transition: all 0.3s ease-in;
@@ -35,11 +68,17 @@ button:hover, button:active, button:focus {
 	border-color: #ffffff;
 	color: #000000;
 	background-color: #ffffff;
-	cursor: pointer;
+	outline: none;
+		box-shadow: none !important;
+		-moz-box-shadow: none !important;
+		-webkit-box-shadow: none !important;
 }
 
+/* LANDING PAGE */
+
 #landingContent {
-	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
 #landingImg {
@@ -47,48 +86,232 @@ button:hover, button:active, button:focus {
 	height: auto;
 }
 
-#landingLogo {
+#landingCenter {
 	position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 30em;
-    height: auto;
-    margin: 30% auto;
+	top: 0;
+	width: 100%;
+	text-align: center;
+}
+
+#landingLogo {
+	width: 30em;
+	height: auto;
+	margin-top: 20%;
 }
 
 #enterSiteBtn {
+	margin-top: 6em;
+}
+
+#socialShare {
 	position: absolute;
-	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	margin: auto auto;
+	margin-top: 6em;
+}
+
+#socialShare a {
+	margin: 10px;
 }
 
 .social-icon {
-	width: 20px;
+	width: 24px;
 	height: auto;
 }
 
-
-
 @media (max-width: 767px) {
+	#landingLogo {
+		width: 24em;
+	}
 
+	button {
+		font-size: 10px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+	#landingLogo {
+		width: 26em;
+	}
 
+	button {
+		font-size: 12px;
+	}
+
+	#landingContent {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+	}
+
+	#landingImg {
+		width: 100%;
+		height: auto;
+	}
+
+	#landingCenter {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	#landingLogo {
+		width: 30em;
+		height: auto;
+		margin-top: 20%;
+	}
+
+	#enterSiteBtn {
+		margin-top: 1em;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+	#landingLogo {
+		width: 26em;
+	}
 
+	button {
+		font-size: 12px;
+	}
 }
 
 @media (min-width: 1200px) {
 
 }
+
+/* MAIN SITE */
+
+#mainSite p {
+	font-family: Nitti;
+}
+
+#navbar-main ul {
+	list-style: none;
+	text-align: right;
+}
+
+#navbar-main ul li {
+	display: inline-block;
+	margin: 0px 20px;
+}
+
+.section {
+	height: 600px;
+	padding: 20px;
+}
+
+#navbar-main .container {
+	padding: 20px;
+}
+
+#navbar-main .container > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#navbar-main .nav-logo {
+	width: 20%;
+}
+
+#navbar-main .nav-menu {
+	width: 80%;
+	float: right;
+}
+
+#home, #about {
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+#home .video iframe {
+	width: 560px;
+	height: 315px;
+}
+
+#home > div {
+	display: inline-block;
+}
+
+#home .content {
+	width: 400px;
+}
+
+#about .content {
+	width: 300px;
+}
+
+#about .media {
+	position: relative;
+}
+
+#about img.member {
+	width: 200px;
+	height: auto;
+	margin: 10px;
+	position: relative;
+}
+
+#about img[name="abheet"] {
+	top: 100px;
+	left: 140px;
+}
+
+#about img[name="midget"] {
+	left: 140px;
+	top: -50px;
+}
+
+#about img[name="danny"] {
+	top: -200px;
+	left: 140px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
