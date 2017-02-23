@@ -45,7 +45,7 @@ body {
 button {
 	height: 3.5em;
 	width: 13.5em;
-	font-size: 14px;
+	/*font-size: 14px;*/
 	padding: 0.5em;
 	cursor: pointer;
 	letter-spacing: 3px;
@@ -126,26 +126,117 @@ button:hover, button:active, button:focus {
 	margin: 10px;
 }
 
-.social-icon {
+.sm .social-icon {
 	width: 24px;
 	height: auto;
 }
 
+.sm {
+	display: none;
+}
+
+/* Landing Page large screen */
+
+.lg {
+	display: block;
+}
+
+.lg .landing {
+	width: 100vw;
+	position: relative;
+}
+
+.lg .landing-background {
+	width: 100%;
+	height: auto;
+}
+
+.lg .landing-content {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 18em;
+}
+
+.lg .landing-logo {
+	width: 30em;
+	height: auto;
+}
+
+.lg .enter-site {
+	margin-top: 6em;
+}
+
+.lg .social-share {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 6em;
+}
+
+.lg .social-share a {
+	margin: 10px;
+}
+
+.lg .social-icon {
+	width: 24px;
+	height: auto;
+}
 
 @media (max-width: 767px) {
+	.sm {
+		display: block;
+	}
 
+	.lg {
+		display: none;
+	}
+
+	.sm .landing-logo, .sm .enter-site {
+		margin-top: 3em;
+		font-size: 12px;
+	}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
 
+	* {
+		font-size: 12px;
+	}
+
+	.lg .enter-site {
+		margin-top: 4em;
+	}
+
+	.lg .landing-content {
+		top: 16em;
+	}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-
+	.lg .landing-content {
+		top: 16em;
+	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
+	.lg .landing-logo {
+		width: 36em;
+	}
 
+	.lg .landing-content {
+		top: 24em;
+	}
+}
+
+@media (min-width: 1600px) {
+	.lg .landing-logo {
+		width: 36em;
+	}
+
+	.lg .landing-content {
+		top: 28em;
+	}
 }
 
 
