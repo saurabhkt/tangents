@@ -221,11 +221,16 @@ button:hover, button:active, button:focus {
 
 @media (min-width: 1200px) and (max-width: 1599px) {
 	.lg .landing-logo {
-		width: 36em;
+		width: 26em;
 	}
 
 	.lg .landing-content {
-		top: 24em;
+		top: 20em;
+	}
+
+	.lg .landing-logo, .lg .enter-site {
+		margin-top: 3em;
+		font-size: 14px;
 	}
 }
 
