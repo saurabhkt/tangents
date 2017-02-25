@@ -409,7 +409,6 @@ nav ul li a {
 #about .media .change-img {
 	display: none;
 	height: 100%;
-	width: 50px;
 }
 
 #about .media .change-img img {
@@ -558,14 +557,16 @@ nav ul li a {
 
 	#about .media .change-img.prev {
 		float: left;
+		padding-right: 20px;
 	}
 
 	#about .media .change-img.next {
 		float: right;
+		padding-left: 20px;
 	}
 
 	#about .member {
-		width: calc(100% - 120px);
+		width: calc(100% - 100px);
 		max-width: 300px;
 		height: auto;
 		margin: 10px;
