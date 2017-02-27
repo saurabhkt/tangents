@@ -96,21 +96,21 @@ button:hover, button:active, button:focus {
 		-webkit-box-shadow: none !important;
 }
 
-#enterSite {
-	display: none;
-}
-
-#mainSite {
-	display: block;
-}
-
 /*#enterSite {
+	display: none;
+}
+
+#mainSite {
+	display: block;
+}*/
+
+#enterSite {
 	display: block;
 }
 
 #mainSite {
 	display: none;
-}*/
+}
 
 /* LANDING PAGE */
 
