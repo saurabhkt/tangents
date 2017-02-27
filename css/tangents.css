@@ -87,11 +87,11 @@ button:hover, button:active, button:focus {
 }
 
 #enterSite {
-	display: none;
+	display: block;
 }
 
 #mainSite {
-	display: block;
+	display: none;
 }
 
 /* LANDING PAGE */
@@ -185,28 +185,28 @@ button:hover, button:active, button:focus {
 	margin-top: 6em;
 }
 
-.lg .social-share {
+#enterSite .lg .social-share {
 	position: absolute;
 	left: 0;
 	right: 0;
 	margin-top: 6em;
 }
 
-.lg .social-share a {
+#enterSite .lg .social-share a {
 	margin: 10px;
 }
 
-.lg .social-icon {
+#enterSite .lg .social-icon {
 	width: 24px;
 	height: auto;
 }
 
 @media (max-width: 767px) {
-	.sm {
+	#enterSite .sm {
 		display: block;
 	}
 
-	.lg {
+	#enterSite .lg {
 		display: none;
 	}
 
@@ -327,6 +327,10 @@ nav ul li a {
 	font-size: 14px;
 }
 
+.section {
+	overflow-x: hidden;
+}
+
 #mainSite * {
 	font-size: 12px;
 }
@@ -397,12 +401,11 @@ nav ul li a {
 }
 
 #about .media {
-	/*float: right;*/
 	text-align: right;
+	left: -30px;
 }
 
 #about .content {
-	/*float: left;*/
 	max-width: 400px;
 }
 
@@ -459,19 +462,97 @@ nav ul li a {
 	display: none !important;
 }
 
+#music {
+	padding: 30px;
+}
 
+#music .lg > div {
+	display: inline-block;
+	width: 50%;
+	padding: 30px;
+	float: left;
+	box-sizing: border-box;
+}
 
+#music .media img {
+	width: 100%;
+	height: auto;
+}
 
+#music {
+	padding: 30px;
+}
 
+#music .sm > div {
+	padding: 30px;
+	box-sizing: border-box;
+}
 
+#contact {
+	padding: 30px;
+	position: relative;
+}
 
+#contact .media {
+	overflow: hidden;
+	padding: 30px;
+}
 
+#contact .sm .content {
+	padding: 30px;
+}
 
+#contact .media img {
+	width: 100%;
+	height: auto;
+}
 
+#contact .lg .content {
+	background-color: #000;
+	padding: 80px;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	max-width: 540px;
+	max-height: 280px;
+	top: 25em;
+	z-index: 1;
+	right: 90px;
+	
+}
+
+#contact .social-icon {
+	width: 18px;
+	height: auto;
+}
+
+#contact .social-share a {
+	margin-right: 10px;
+}
+
+#footer {
+	margin-top: 100px;
+}
+
+#footer .content {
+	text-align: center;
+}
+
+#footer .content {
+
+}
 
 
 
 @media (max-width: 991px) {
+
+	#mainSite .sm {
+		display: block;
+	}
+
+	#mainSite .lg {
+		display: none;
+	}
 
 	.section {
 		max-width: 700px;
@@ -528,21 +609,20 @@ nav ul li a {
 		text-align: center;
 	}
 
-	#home .content, #about .content {
+	#home .content, #about .content, #music .content, #contact .content {
 		width: 100%;
 		max-width: 500px;
 		margin: 0 auto;
 	}
 
 	#about .media {
-		height: 100%;
-		max-height: 300px;
 		text-align: center;
 	}
 
 	#about .media .change-img {
 		display: inline-block;
 		cursor: pointer;
+		max-height: 400px;
 	}
 
 	#about .media .change-img .helper {
