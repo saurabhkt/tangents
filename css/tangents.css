@@ -640,6 +640,11 @@ nav ul li a {
 	margin-top: 100px;
 }
 
+#footer a {
+	font-family: Nitti;
+	text-decoration: underline !important;
+}
+
 #footer .content {
 	text-align: center;
 }

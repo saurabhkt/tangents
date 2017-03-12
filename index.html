@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -292,17 +292,18 @@
 					<p>
 						&copy; Tangents 2017.
 						<br>
-						Designed and developed by Sanjana Bhatt & Saurabh KT
+						Designed and developed by <a target="_blank" href="https://www.behance.net/sanjanabhatt">Sanjana Bhatt</a> & <a target="_blank" href="http://foaas.com/ballmer/KT/KT/agodcomplex">Saurabh KT <!-- &#128060; --></a>
 					</p>
 				</div>
 			</div>
 		</section>
 
+		<span style="display: none;" id="panda">&#128060; http://bit.ly/2mPfiuwuw &#128060;</span>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<!-- <script src="/vendor/js/jquery.scrollify.min.js"></script> -->
 		<script>
 			$(function() {
-
 				$('button.enter-site').on('click', function() {
 					$('#enterSite').hide();
 					$('#mainSite').show();
@@ -324,10 +325,14 @@
 					if ($(window).width()  > 991 ) {
 						$('nav .sm-nav-menu').hide();
 						$('#about .member').removeClass('hide');
+						// $.scrollify({
+						// 	section : ".section"
+						// });
 					}
 					else {
 						$('#about .member').addClass('hide');
 						$('#about .member[name="1"]').removeClass('hide');
+						// $.scrollify.destroy()
 					}
 				}
 
@@ -352,61 +357,25 @@
 
 			});
 
-			console.log(`
-                                      Tangestic
-                                  lesalldayerrdayni
-                              ggaTangesticlesalldayerr
-                      dayniggaTangest           iclesall
-                   dayerrdaynigg                  aTanges
-                 ticlesalldayerr                   daynig
-                 gaTangesticlesal                   ldaye
-                 rrdayniggaT angest    iclesallday  errda
-                 yniggaTangesticlesa lldayerrdaynigg aTan
-                 gesticlesalldayer  rdayniggaTangesticles
-                allda  yerrdaynigg  aTangesticlesalldayer
-               rdayniggaTangesticle salldayerrd ayniggaTa
-              ngesticlesalldayerr   dayniggaTangesticlesa
-             lldayerrdayniggaTangesticlesalldayer  rdayn
-            iggaT          angesticlesalldaye     rrdayn
-           iggaT                      angesti     clesal
-          ldayer                                 rdayni
-         ggaTan                                 gestic
-        lesall                                  dayerr
-        dayni                      ggaT        angest
-        icle                      salld aye   rrdayn
-        igga                      Tangesticl  esall                         dayerrday
-       nigga                      Tangestic  lesal                        ldayerrdayni
-       ggaTa                     ngesticles allda                       yerrda    ynig
-       gaTan                     gesticles  allda                     yerrday    nigga
-       Tange                    sticlesal  ldayer                   rdaynig     gaTan
-       gesti                    clesalld   ayerrdayniggaTangest   iclesal     ldaye
-        rrda                   yniggaTa    ngesticlesalldayerrdayniggaT      anges
-        ticl                   esallda     yerrd   aynig   gaTangesti      clesal
-        lday                  errdayni      gga   Tangesticlesallda      yerrda
-        ynigg               aTang estic         lesalldayerrdaynig     gaTange
-         stic             lesal  ldayerr         dayniggaTangesticle   salldaye
-         rrday            niggaTangestic                     lesallda    yerrdayni
-          ggaTa            ngesticlesal              lday       errday  nigg aTang
-          esticl              esal                   lday        errday  niggaTan
-           gestic                                les              allda    yerr
-            daynigga                            Tang              estic     lesa
-               lldayer                          rday              niggaTangestic
-     les        alldayerrd                       ayni           ggaTangesticles
-    alldaye    rrdayniggaTangest                  icl         esallda    y
-    errdayniggaTan gesticlesalldayerrday           nigg    aTanges
-    ticl esalldayerrday    niggaTangesticl esalldayerrdayniggaTa
-     nges  ticlesalld         ayerrdaynig gaTangesticlesallda
-      yerr   daynig         gaTangesticl esall dayerrdayni
-       ggaTangest           iclesallday  errd
-        aynigga              Tangesti   cles
-          all                dayerr    dayn
-                              iggaTa  nges
-                               ticlesalld
-                                 ayerrda
-                                   yni
-                                                                                        
-`);
+			function scrollToSection(target) {
+				$('html,body').animate({
+					scrollTop: $(target).offset().top - ($('#navbar-main').offset().top)
+				}, 1000);
+			}
+
+			$('#navbar-main a').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length) {
+							scrollToSection(target);
+							return false;
+						} 
+				}
+			});
+
 		</script>
+		<script src="/js/dickbutt.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -415,6 +384,9 @@
 
 			ga('create', 'UA-93516934-1', 'auto');
 			ga('send', 'pageview');
+		</script>
+		<script>
+			console.log($('#panda').html());
 		</script>
 	</body>
 </html>
