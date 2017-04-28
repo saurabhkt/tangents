@@ -105,21 +105,21 @@ button:hover, button:active, button:focus {
 		-webkit-box-shadow: none !important;
 }
 
-/*#enterSite {
-	display: none;
-}
-
-#mainSite {
-	display: block;
-}*/
-
 #enterSite {
+	display: none;
+}
+
+#mainSite {
+	display: block;
+}
+
+/*#enterSite {
 	display: block;
 }
 
 #mainSite {
 	display: none;
-}
+}*/
 
 /* LANDING PAGE */
 
@@ -394,13 +394,6 @@ nav ul li a {
 	margin-top: 15px;
 }
 
-/*#home .video iframe {
-	width: 100%;
-	height: 100%;
-	border: none;
-	overflow: hidden;
-}*/
-
 #home {
 	padding: 40px;
 	padding-top: 80px;
@@ -413,16 +406,49 @@ nav ul li a {
 	padding: 30px;
 }
 
-#home .video {
+#home > .heading {
+	padding:  0px;
+	margin:  0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+#home > .heading h3 {
+	margin: 0px;
+}
+
+#home .music-links-center a button {
+	margin-right:  20px;
+}
+
+#home .bandcamp {
+	width: 50%;
+	text-align: center;
+}
+
+#home .heading {
+	display: none;
+}
+
+#home .heading h3 {
+	margin-bottom: 15px;
+}
+
+#home .content h3 {
+	display: block;
+}
+
+/*#home .bandcamp {
 	width: 60%;
+	text-align: center;
 }
 
 #home .content {
 	width: 40%;
 	max-width: 400px;
-}
+}*/
 
-#home .video .container {
+/*#home .bandcamp .container {
 	position: relative;
 	padding-bottom: 56.25%;
 	padding-top: 30px;
@@ -430,7 +456,53 @@ nav ul li a {
 	overflow: hidden;
 }
 
-#home .video iframe {
+#home .bandcamp iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}*/
+
+/*#donate .video iframe {
+	width: 100%;
+	height: 100%;
+	border: none;
+	overflow: hidden;
+}*/
+
+#donate {
+	padding: 40px;
+	padding-top: 80px;
+}
+
+#donate > div {
+	display: inline-block;
+	position: relative;
+	float: left;
+	padding: 30px;
+}
+
+#donate .video {
+	width: 60%;
+}
+
+#donate .content {
+	width: 40%;
+	max-width: 400px;
+}
+
+#donate .video .container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+#donate .video iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -705,14 +777,30 @@ nav ul li a {
 		display: block;
 	}
 
-	.donate-center {
+	#home {
+		padding: 30px 0px 30px 0px;
+	}
+
+	#home > div {
+		display: block;
+		padding: 0px;
+		float: none;
+		text-align: center;
+	}
+
+	#home > .heading {
+		padding:  0px;
+		margin:  0 auto;
 		width: 100%;
 		text-align: center;
 	}
 
-	#mainSite button {
-		font-size: 14px;
+	#home .bandcamp {
+		width: 100%;
 	}
+
+
+
 
 	#home {
 		padding: 30px 0px 30px 0px;
@@ -740,6 +828,68 @@ nav ul li a {
 	}
 
 	#home .content, #about .content, #music .content, #contact .content {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto;
+		margin-top: 30px;
+	}
+
+	#home .music-links-center {
+		margin-left: -20px;
+    	margin-right: -20px;
+	}
+
+	#home .music-links-center a button {
+		font-size: 10px;
+		margin: 5px;
+	}
+
+	#home .heading {
+		display: block;
+	}
+
+	#home .content h3 {
+		display: none;
+	}
+
+
+
+
+	.donate-center {
+		width: 100%;
+		text-align: center;
+	}
+
+	#mainSite button {
+		font-size: 14px;
+	}
+
+	#donate {
+		padding: 30px 0px 30px 0px;
+	}
+
+	#donate > div, #about > div {
+		display: block;
+		padding: 0px;
+		float: none;
+	}
+
+	#donate .content {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	/*#donate .video iframe {
+		max-width: 600px;
+	}*/
+
+	#donate .video {
+		width: 100%;
+		/*max-height: 400px;*/
+		text-align: center;
+	}
+
+	#donate .content, #about .content, #music .content, #contact .content {
 		width: 100%;
 		max-width: 500px;
 		margin: 0 auto;
