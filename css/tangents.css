@@ -35,7 +35,7 @@
 	font-size: 14px;
 }
 
-a {
+a:not('.download-link-inline') {
 	text-decoration: none !important;
 	color: #ffffff;
 	-webkit-touch-callout: none;
@@ -510,6 +510,11 @@ nav ul li a {
 	height: 100%;
 	border: none;
 	overflow: hidden;
+}
+
+#donate a.download-link-inline {
+	/*color: red;*/
+	text-decoration: underline;
 }
 
 #about {
