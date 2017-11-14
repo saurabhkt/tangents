@@ -197,27 +197,43 @@ button:hover, button:active, button:focus {
 }
 
 .lg .landing-content {
-	text-align: center;
+	/*text-align: center;*/
 	position: absolute;
 	width: 100%;
-	top: 18em;
+	top: 0;
+	bottom: 0;
 }
 
 .lg .landing-logo {
 	width: 24em;
 	height: auto;
-	margin-top: 3em;
+	/*margin-top: 3em;*/
+	position: relative;
+	top: 5em;
+	left: 5em;
 }
 
 #enterSite .lg .enter-site {
-	margin-top: 6em;
+	/*margin-top: 6em;*/
+	color: #000000;
+	border: 1px solid #000000;
+	position: absolute;
+	bottom: calc(100vw * 0.18);
+	right: 8em;
+}
+
+#enterSite .lg .enter-site:hover {
+	border: 1px solid #ffffff;
 }
 
 #enterSite .lg .social-share {
+	/*padding-top: 6em;*/
 	position: absolute;
-	left: 0;
-	right: 0;
-	padding-top: 6em;
+	bottom: calc(100vw * 0.11);
+	right: 8em;
+	width: 13.5em;
+	text-align: center;
+
 }
 
 #enterSite .lg .social-share a {
@@ -250,19 +266,19 @@ button:hover, button:active, button:focus {
 		font-size: 12px;
 	}
 
-	.lg .enter-site {
+	/*.lg .enter-site {
 		margin-top: 4em;
-	}
+	}*/
 
-	.lg .landing-content {
+	/*.lg .landing-content {
 		top: 16em;
-	}
+	}*/
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-	.lg .landing-content {
+	/*.lg .landing-content {
 		top: 16em;
-	}
+	}*/
 
 	/*#enterSite * {
 		font-size: 12px;
@@ -274,18 +290,23 @@ button:hover, button:active, button:focus {
 		width: 22em;
 	}
 
-	.lg .landing-content {
+	/*.lg .landing-content {
 		top: 20em;
-	}
-
-	.lg .landing-logo {
-		margin-top: 2em;
-	}
-
-	/*#enterSite .lg .enter-site, #enterSite .lg .social-share{
-		margin-top: 6em;
-		font-size: 14px;
 	}*/
+
+	/*.lg .landing-logo {
+		margin-top: 2em;
+	}*/
+
+	#enterSite .lg .enter-site {
+		bottom: calc(100vw * 0.18);
+		right: 15em;
+	}
+
+	#enterSite .lg .social-share {
+		bottom: calc(100vw * 0.12);
+		right: 15em;
+	}
 }
 
 @media (min-width: 1600px) {
@@ -293,9 +314,19 @@ button:hover, button:active, button:focus {
 		width: 32em;
 	}
 
-	.lg .landing-content {
-		top: 28em;
+	#enterSite .lg .enter-site {
+		bottom: calc(100vw * 0.2);
+		right: 20em;
 	}
+
+	#enterSite .lg .social-share {
+		bottom: calc(100vw * 0.16);
+		right: 20em;
+	}
+
+	/*.lg .landing-content {
+		top: 28em;
+	}*/
 }
 
 /* MAIN SITE */
@@ -519,22 +550,67 @@ nav ul li a {
 }
 
 #about {
-	padding: 30px;
+	position: relative;
 }
 
-#about > div {
+#about .content {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	padding: 0px;
+	top: 70px;
+}
+
+#about .content .container {
+	width: 540px;
+	margin: 0 auto;
+}
+
+#about .media {
 	display: block;
 	position: relative;
-	padding: 30px;
+	padding: 60px;
 	width: 100%;
 }
 
 #about .media {
-	text-align: right;
-	left: -30px;
+	/*text-align: right;
+	left: -30px;*/
+	width: 100%;
 }
 
-#about .content {
+#about p {
+	margin: 0px;
+}
+
+#about .media img {
+	width: 100%;
+}
+
+#about .bio, #about .members {
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+
+#about .bio {
+	max-width: 280px;
+}
+
+#about .members {
+	max-width: 200px;
+	float: right;
+}
+
+#about .members .name {
+	margin-bottom: 10px;
+}
+
+#about .members label, #about .members p {
+	letter-spacing: 3px;
+}
+
+/*#about .content {
 	max-width: 400px;
 }
 
@@ -558,10 +634,9 @@ nav ul li a {
 #about .member img {
 	width: 100%;
 	height: auto;
-	/*margin: 10px;*/
-}
+}*/
 
-#about .member .name {
+/*#about .member .name {
 	text-align: left;
 	position: relative;
 	left: 160px;
@@ -585,7 +660,7 @@ nav ul li a {
 #about .member[name="3"] {
 	position: relative;
 	bottom: 300px;
-}
+}*/
 
 .hide {
 	display: none !important;
@@ -902,16 +977,55 @@ nav ul li a {
 		margin-top: 30px;
 	}
 
+
+
+
+	#about .sm {
+		display: block;
+	}
+
+	#about .lg {
+		display: none;
+	}
+
 	#about .content {
 		margin-top: 0px;
+		height: 100%;
+		max-width: none;
+		height: 100%;
+		top: 0;
 	}
 
 	#about .media {
 		text-align: center;
 		left: 0;
+		padding: 0px;
 	}
 
-	#about .media .change-img {
+	#about .content .container {
+		text-align: center;
+		width: 100%;
+	}
+
+	#about .bio, #about .members {
+		display: block;
+		width: 100%;
+	}
+
+	#about .bio {
+		margin: 0 auto;
+	}
+
+	#about .members {
+		max-width: 200px;
+		margin: 0 auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 20px;
+	}
+
+	/*#about .media .change-img {
 		display: inline-block;
 		cursor: pointer;
 		max-height: 400px;
@@ -971,7 +1085,7 @@ nav ul li a {
 	#about .member[name="3"] {
 		position: relative;
 		bottom: 0px;
-	}
+	}*/
 
 	#music .content {
 		height: auto;
